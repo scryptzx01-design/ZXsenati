@@ -1,0 +1,12 @@
+Obgetivo: Comprender y aplicar los FUNDAMENTOS de IA en trabajo en equipo
+
+//programadores = 2
+
+programador (1)+                                       tareas:
+usuario                                                agregar al equipo de trabajo
+correo (github)                                        crear la estructira del proyecto (HTLM)
+
+programador (2)+                                       tareas:
+usuario                                                registrarse
+correo (github)                                        aceptar invitacion
+                                                       clonar el proyecto
