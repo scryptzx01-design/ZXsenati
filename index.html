@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>La Aventura SENATI — Juego 2D de Plataformas</title>
+<meta name="description" content="Juego 2D educativo sobre la historia de SENATI: aldeanos que narran la historia, quiz con preguntas, puertas de madera y un gran parkour. Para PC y celular.">
+<meta name="theme-color" content="#1d6fd6">
+<link rel="icon" href="IMGS/jugador_idle.png">
+<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+<canvas id="lienzo"></canvas>
+
+<!-- HUD -->
+<div id="hud" class="oculto-suave">
+  <span id="hud-zona">PUEBLO SENATI</span>
+  <span id="hud-puertas">Puertas 0/3</span>
+  <span id="hud-tiempo">Tiempo 00:00</span>
+  <span id="hud-caidas">Caídas 0</span>
+</div>
+
+<!-- Controles táctiles -->
+<div id="controles">
+  <div class="grupo-izq">
+    <button id="btn-izq" aria-label="Mover a la izquierda"><span class="flecha izq"></span></button>
+    <button id="btn-der" aria-label="Mover a la derecha"><span class="flecha der"></span></button>
+  </div>
+  <div class="grupo-der">
+    <button id="btn-accion" aria-label="Hablar">HABLAR</button>
+    <button id="btn-salto" aria-label="Saltar">SALTAR</button>
+  </div>
+</div>
+
+<!-- Diálogo -->
+<div id="dialogo" class="oculto">
+  <div id="dialogo-retrato"></div>
+  <div id="dialogo-cuerpo">
+    <div id="dialogo-cab">
+      <span id="dialogo-nombre"></span>
+      <span id="dialogo-pagina">1 / 1</span>
+    </div>
+    <div id="dialogo-texto"></div>
+    <div id="dialogo-aviso">toca o presiona E para continuar</div>
+  </div>
+</div>
+
+<!-- Quiz -->
+<div id="quiz" class="oculto">
+  <div class="quiz-caja">
+    <div class="quiz-cab">
+      <span id="quiz-npc"></span>
+      <button id="quiz-cerrar" aria-label="Cerrar">X</button>
+    </div>
+    <div id="quiz-puntos"></div>
+    <div id="quiz-pregunta"></div>
+    <div id="quiz-opciones"></div>
+    <div id="quiz-feedback"></div>
+  </div>
+</div>
+
+<!-- Pantalla de título -->
+<div id="titulo">
+  <div class="titulo-caja">
+    <div class="titulo-logo">LA AVENTURA<br><span>SENATI</span></div>
+    <div class="titulo-sub">Una historia interactiva para PC y celular</div>
+    <div class="titulo-controles">
+      <div><b>PC:</b> flechas o A / D para moverte, W o ESPACIO para saltar, E para hablar</div>
+      <div><b>Celular:</b> usa los botones en pantalla</div>
+      <div class="titulo-historia">3 aldeanos te contarán la historia de SENATI y 3 guardianes pondrán a prueba tus conocimientos para abrir las puertas de madera. Al final te espera el gran parkour.</div>
+    </div>
+    <button id="btn-jugar">JUGAR</button>
+    <div class="titulo-credito">Proyecto escolar — La historia de SENATI en un videojuego 2D</div>
+  </div>
+</div>
+
+<!-- Pantalla de victoria -->
+<div id="victoria" class="oculto">
+  <div class="victoria-caja">
+    <div class="victoria-corazon" aria-hidden="true"></div>
+    <div class="victoria-titulo">¡FELICITACIONES!</div>
+    <div class="victoria-texto">Completaste la historia de SENATI<br>y el gran parkour.</div>
+    <div class="victoria-stats">
+      <div><span>Tiempo</span><b id="victoria-tiempo">00:00</b></div>
+      <div><span>Caídas</span><b id="victoria-caidas">0</b></div>
+      <div><span>Mejor tiempo</span><b id="victoria-mejor">00:00</b></div>
+    </div>
+    <button id="btn-rejugar">JUGAR OTRA VEZ</button>
+  </div>
+</div>
+
+<!-- Avisos -->
+<div id="banner"></div>
+<div id="toast"></div>
+<div id="flash"></div>
+<div id="fundido"></div>
+<div id="rotar">Gira tu celular para jugar mejor</div>
+
+<script src="js/datos.js"></script>
+<script src="js/audio.js"></script>
+<script src="js/motor.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/principal.js"></script>
+</body>
+</html>
